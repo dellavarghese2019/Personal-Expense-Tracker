@@ -1,0 +1,34 @@
+<div style="margin-left: 410px; margin-top: 30px;">
+  <button mat-flat-button style="background-color:rgb(50, 187, 224);margin-right:430px; border:none; color:white; width:170px; float:right"  (click)="goToDashboard()">Go To Dashboard</button>
+
+
+<h2>My Profile</h2>
+
+<form [formGroup]="profileForm" (ngSubmit)="saveChanges()">
+  <label for="name">Name</label>
+  <br>
+  <input style="width:440px;" id="name" type="text" formControlName="name" />
+  <br><br>
+
+  <label for="email">Email</label>
+  <br>
+  <input style="width:440px;" id="email" type="email" formControlName="email" />
+  <br><br>
+
+  <button mat-flat-button style="background-color:rgba(77, 9, 72, 0.897); border:none; color:white; width:60px;" type="submit">Save </button>
+  <hr />
+<h3>Change Password</h3>
+
+<form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+  <label for="currentPassword">Current Password</label><br>
+  <input  style="width:440px;"id="currentPassword" type="password" formControlName="currentPassword" />
+  <br><br>
+  <label for="newPassword">New Password</label><br>
+  <input style="width:440px;" id="newPassword" type="password" formControlName="newPassword" />
+  <br><br>
+  <button mat-flat-button style="background-color:rgba(77, 9, 72, 0.897); border:none; color:white; width:60px;" type="submit">Save</button>
+</form>
+
+</form>
+
+</div>

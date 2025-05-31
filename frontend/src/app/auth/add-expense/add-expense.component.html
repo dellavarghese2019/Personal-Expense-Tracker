@@ -1,0 +1,41 @@
+
+<div class="add-expense-container">
+  <button mat-flat-button style="background-color:rgb(50, 187, 224); color:white;  float:right"  (click)="goToDashboard()">Go To Dashboard</button>
+
+
+    <h2>Add Expense</h2>
+  
+    <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Expense Name</label>
+        <input id="title" type="text" formControlName="title" />
+      </div>
+  
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input id="amount" type="number" formControlName="amount" />
+      </div>
+  
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input id="date" type="date" formControlName="date" />
+      </div>
+  
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" formControlName="category">
+          <option value="">Select</option>
+          <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+        </select>
+      </div>
+  
+     
+
+      <input type="file" (change)="onFileSelected($event)" accept=".csv" />
+  
+      <button type="submit" [disabled]="expenseForm.invalid" mat-flat-button style="background-color:rgba(77, 9, 72, 0.897); width:150px;">Save Expense</button>
+
+    </form>
+
+  </div>
+  

@@ -1,0 +1,24 @@
+<div class="login-container" style="margin-left: 410px; margin-top: 30px;">
+<h2>Login</h2>
+<br>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label>Email</label>
+  <br>
+  <input style="width:440px;" formControlName="email" type="email" />
+  <br><br>
+
+  <label>Password</label>
+  <br>
+  <input style="width:440px;" formControlName="password" type="password" />
+   <br><br>
+  <button mat-flat-button style="background-color:rgb(50, 187, 224); border:none; width:50px; color:white;" type="submit" [disabled]="loginForm.invalid">Login</button>
+
+</form>
+
+
+<p>
+  Don't have an account?
+  <button mat-flat-button style="background-color:rgb(50, 187, 224); border:none; width:75px; color:white;" (click)="goToRegister()">Register</button>
+</p>
+
+</div>

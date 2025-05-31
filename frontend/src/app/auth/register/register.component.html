@@ -1,0 +1,20 @@
+<div style="margin-left: 410px; margin-top: 30px;" >
+<h2>Register</h2>
+<br>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label>Name</label>
+  <br>
+  <input style="width:440px;" formControlName="name" type="text" />
+  <br><br>
+  <label>Email</label>
+  <br>
+  <input style="width:440px;" formControlName="email" type="email" />
+  <br><br>
+  <label>Password</label>
+  <br>
+  <input style="width:440px;" formControlName="password" type="password" />
+  <br><br>
+  <button mat-flat-button style="background-color:rgb(50, 187, 224); border:none;  color:white; width:75px;" type="submit" [disabled]="registerForm.invalid">Register</button>
+</form>
+
+</div>

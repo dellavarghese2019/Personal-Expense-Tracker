@@ -1,0 +1,40 @@
+.add-expense-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .form-group {
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        font-weight: 600;
+      }
+  
+      input, select {
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+  
+    button {
+      width: fit-content;
+      padding: 0.6rem 1.2rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+  
+      &:disabled {
+        background-color: #999;
+      }
+    }
+  }
+  
