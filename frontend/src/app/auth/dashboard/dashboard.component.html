@@ -1,0 +1,62 @@
+<div class="container py-5 text-white">
+
+  <!-- Top Right Buttons -->
+  <div class="d-flex justify-content-end gap-2 mb-4">
+    <button class="btn btn-dashboard" (click)="goToAddExpense()">➕ Add Expense</button>
+    <button class="btn btn-dashboard" (click)="goToProfile()">Profile</button>
+    <i class="fa-solid fa-right-from-bracket" (click)="logout()"></i>
+  </div>
+
+  <!-- Welcome & Total -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Welcome, {{ userName }}!</h2>
+    <div class="d-inline-flex align-items-center gap-2 mt-3 bg-total px-3 py-2 rounded">
+      <h3 class="mb-0">Total Expenses:</h3>
+      <h2 class="mb-0 fw-bold">₹{{ totalExpenses }}</h2>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="row g-5 align-items-start">
+
+    <!-- Recent Expenses Table -->
+    <div class="col-lg-6 col-md-12">
+      <div class="card bg-light bg-opacity-10 p-4 rounded shadow-sm">
+        <h3 class="text-white mb-4">Recent Expenses</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered text-white align-middle">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let exp of sortedExpenses">
+                <td>{{ exp.title }}</td>
+                <td>₹{{ exp.amount }}</td>
+                <td>{{ exp.category }}</td>
+                <td>{{ exp.date | date }}</td>
+                <td>
+                  <i class="fa-regular fa-pen-to-square me-3" (click)="editExpense(exp._id)"></i>
+                  <i class="fa-solid fa-trash" (click)="deleteExpense(exp._id)"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="col-lg-6 col-md-12">
+      <div class="card bg-light bg-opacity-10 p-4 rounded shadow-sm">
+        <h3 class="text-white mb-4">Expense Summary</h3>
+        <canvas baseChart [data]="barChartData" chartType="bar"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

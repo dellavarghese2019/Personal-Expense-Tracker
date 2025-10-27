@@ -1,0 +1,69 @@
+.section2 {
+  padding: 50px 20px;
+}
+
+/* Keep your original text styling */
+.text h1,
+.text h2 {
+  margin-top: 0;
+  color: white;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+
+.text h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+/* Responsive image style */
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ffffff5e;
+}
+
+/* Center text and adjust font sizes for mobile */
+@media (max-width: 768px) {
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .text h2 {
+    font-size: 1rem;
+  }
+
+  .section2 {
+    padding: 30px 10px;
+  }
+}
+
+/* Button styling (same as before) */
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: white;
+  height: 48px;
+  background-color: #d98d72;
+  border: 2px solid #ffffff96;
+  border-radius: 10px;
+  width: 143px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f4dbcb56;
+}

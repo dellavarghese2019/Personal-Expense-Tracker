@@ -1,0 +1,25 @@
+.header {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #F4DBCB 0%, #E7B4A0 100%);
+}
+
+.sec1 {
+  display: flex;
+  align-items: center; /* ✅ Vertically centers logo + text */
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  margin-right: 12px; /* space between logo and text */
+}
+
+.name h1 {
+  color: rgb(152, 30, 30);
+  margin: 0; /* remove top margin */
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

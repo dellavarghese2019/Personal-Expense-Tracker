@@ -1,0 +1,94 @@
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centers everything horizontally */
+  justify-content: center;   /* Centers vertically if parent allows */
+  min-height: 100vh;         /* Fills full height of screen */
+  padding: 50px 20px;
+}
+
+.heading h2 {
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fm {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+button {
+  color: white;
+  height: 48px;
+  background-color: #d98d72;
+  border: 2px solid #ffffff96;
+  border-radius: 10px;
+  width: 143px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #f4dbcb56;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.right p {
+  color: white;
+  font-size: 1rem;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .fm {
+    width: 90%;
+    padding: 25px;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  background-color: #d98d72 !important;
+  border-color: #ffffff96 !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #f4dbcb56 !important;
+  border-color: #ffffff96 !important;
+  color: white !important;
+}

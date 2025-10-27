@@ -1,0 +1,45 @@
+<div class="container py-5 text-white">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Add Expenses</h2>
+    <button class="btn btn-dashboard" (click)="goToDashboard()">Go To Dashboard</button>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()" class="p-4 rounded shadow-sm bg-light bg-opacity-10">
+        
+        <div class="mb-3">
+          <label for="title" class="form-label fw-bold">Expense Name</label>
+          <input id="title" type="text" formControlName="title" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label for="amount" class="form-label fw-bold">Amount</label>
+          <input id="amount" type="number" formControlName="amount" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="form-label fw-bold">Date</label>
+          <input id="date" type="date" formControlName="date" class="form-control" />
+        </div>
+<div class="mb-3">
+          <label for="category" class="form-label fw-bold">Category</label>
+          <select id="category" formControlName="category" class="form-select">
+            <option value="">Select</option>
+            <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-bold">Import from CSV</label>
+          <input type="file" class="form-control" (change)="onFileSelected($event)" accept=".csv" />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="expenseForm.invalid">
+          Save Expense
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+h2, h3 {
+  color: white;
+}
+
+/* Buttons */
+.btn-dashboard {
+  background-color: #d98d72;
+  border: 2px solid #ffffff96;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-dashboard:hover {
+  background-color: #f4dbcb56;
+  color: white;
+}
+
+/* Total Expense */
+.bg-total {
+  background-color: #d75829;
+  border-radius: 10px;
+}
+
+/* Cards */
+.bg-light {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Table Styling */
+.table {
+  border-collapse: collapse;
+  color: white;
+}
+
+.table th {
+  background-color: #d98d72;
+  color: white;
+  border: 1px solid #f4dbcb56;
+}
+
+.table td {
+  background-color: #f4dbcb56;
+  border: 1px solid #ffffff40;
+}
+
+/* Font Awesome icons */
+.fa-regular, .fa-solid {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.fa-regular:hover, .fa-solid:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .btn-dashboard {
+    width: 100%;
+  }
+
+  .bg-total {
+    flex-direction: column;
+    text-align: center;
+  }
+}

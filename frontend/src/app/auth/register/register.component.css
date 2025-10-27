@@ -1,0 +1,35 @@
+h2 {
+  color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+/* Input box styling */
+.form-control {
+  border-radius: 15px;
+  border: 1px solid rgba(210, 83, 83, 0.132);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* ✅ Your custom peach-colored button */
+.btn-primary {
+  background-color: #d98d72 !important;
+  border-color: #ffffff96 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 48px;
+}
+
+.btn-primary:hover {
+  background-color: #f4dbcb56 !important;
+  border-color: #ffffff96 !important;
+  color: white !important;
+}
+
+/* Light box style for form */
+.bg-light {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,49 @@
+h2 {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+/* Dashboard button */
+.btn-dashboard {
+  background-color: #d98d72;
+  border: 2px solid #ffffff96;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.btn-dashboard:hover {
+  background-color: #f4dbcb56;
+  color: white;
+}
+
+/* Form inputs */
+.form-control {
+  border-radius: 15px;
+  border: 1px solid rgba(210, 83, 83, 0.132);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Peach-themed Save button */
+.btn-primary {
+  background-color: #d98d72 !important;
+  border-color: #ffffff96 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 48px;
+}
+
+.btn-primary:hover {
+  background-color: #f4dbcb56 !important;
+  border-color: #ffffff96 !important;
+  color: white !important;
+}
+
+/* Soft card background */
+.bg-light {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}

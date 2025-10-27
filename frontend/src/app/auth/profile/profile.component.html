@@ -1,0 +1,68 @@
+<div class="container py-5 text-white">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>My Profile</h2>
+    <button class="btn btn-dashboard" (click)="goToDashboard()">Go To Dashboard</button>
+  </div>
+
+  <div class="row g-5">
+    <!-- Profile Info Section -->
+    <div class="col-md-6">
+      <div class="card bg-light bg-opacity-10 p-4 shadow-sm rounded">
+        <h4 class="text-white mb-4">Profile Details</h4>
+        <form [formGroup]="profileForm" (ngSubmit)="saveChanges()">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input
+              id="name"
+              type="text"
+              formControlName="name"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              class="form-control"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mt-2">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Password Change Section -->
+    <div class="col-md-6">
+      <div class="card bg-light bg-opacity-10 p-4 shadow-sm rounded">
+        <h4 class="text-white mb-4">Change Password</h4>
+        <form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+          <div class="mb-3">
+            <label for="currentPassword" class="form-label fw-bold">Current Password</label>
+            <input
+              id="currentPassword"
+              type="password"
+              formControlName="currentPassword"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="newPassword" class="form-label fw-bold">New Password</label>
+            <input
+              id="newPassword"
+              type="password"
+              formControlName="newPassword"
+              class="form-control"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mt-2">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
