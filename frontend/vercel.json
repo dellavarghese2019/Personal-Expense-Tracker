@@ -1,10 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "angular.json", "use": "@vercel/angular" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "outputDirectory": "dist/frontend"
+  "rewrites": [
+    { "source": "/(.*)", "dest": "/index.html" }
+  ]
 }
+
