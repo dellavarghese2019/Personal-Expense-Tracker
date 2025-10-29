@@ -4,7 +4,7 @@
     { "src": "angular.json", "use": "@vercel/angular" }
   ],
   "routes": [
-    { "src": "/(.*)", "destination": "/index.html" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "outputDirectory": "dist/frontend"
 }
